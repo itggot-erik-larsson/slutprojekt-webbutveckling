@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>1337-Gym</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>1337-Gym</h1>
+                <div class="menu">
+                        <i class="material-icons" onclick="toggleMenu()">close</i>
+                        <ul>
+                            <li><a href="home.html">Hem</a></li>
+                            <li><a href="buy.html">Bli Medlem</a></li>
+                            <li><a href="book.html">Personlig Träning</a></li>
+                            <li><a href="book.html">Gruppträning</a></li>
+                        </ul>
+                </div>
+                <i class="material-icons menu_button" onclick="toggleMenu()">menu</i>
+            </header>
+            <%= yield %>
+            <footer>
+                 <div class="column1">
+                <p>Gamlestaden</p>
+                <p>Kärra</p>
+                <p>© 2018</p>
+            </div>
+            <div class="column2">
+                <p>Hovås</p>
+                <p>Landvetter</p>
+                <p>1337-Gym AB</p>
+            </div>
+            <div class="column3">
+                <p>Kullavik</p>
+                <p>Stenungsund</p>
+            </div>
+            </footer>
+        </div>
+    </body>
+    <script src="js/menu.js"></script>
+</html>
