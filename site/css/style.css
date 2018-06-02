@@ -251,6 +251,9 @@ button {
     grid-column: 2;
 }
 
+.book_desk {
+    display: none;
+}
 .account {
     text-align: center;
     display: grid;
@@ -290,7 +293,7 @@ button {
 .desk_menu {
     display: none;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
     body {
         background-color: black;
         margin: 0;
@@ -304,7 +307,7 @@ button {
         grid-template-columns: repeat(1fr, 5);
         width: 100vw;
         height: 100vh;
-        background-color: grey;
+        background-color: rgb(119, 101, 1);
     }
     
     header {
@@ -312,17 +315,13 @@ button {
         grid-column: span 5;
         width: 100vw;
         height: 15vh;
-        display: grid;
-        grid-template-rows: repeat(1fr);
-        grid-template-columns: 30px repeat(1fr, 5);
         background-color: black;
         color: rgb(119, 101, 1);
         
     }
     
     header h1 {
-        grid-column: 1;
-        grid-row: 1;
+        width: 15vw;
         text-align: center;
     }
 
@@ -342,26 +341,26 @@ button {
         grid-row: 1;
         height: 15vh;
         width: 80vw;
-        text-align: center;
         display: block;
-        display: inline-block;
+        text-align: center;
+    }
+
+    .desk_menu ul {
+        list-style-type: none;
+        display: block;
+        padding-left: 10vw;
     }
     
-    .home {
-        grid-column: 2;
+    .desk_menu li {
+        display: inline;
+        font-size: 2vw;
+        border-style: none;
+        margin: 1.5vw;
     }
-
-    .member {
-        grid-column: 3;
+    .desk_menu li a {
+        display: inline;
     }
-
-    .personal_m {
-        grid-column: 4;
-    }
-
-    .login_m {
-        grid-column: 5;
-    }
+    
     .mobile_menu {
         display: none;
 
@@ -435,7 +434,196 @@ button {
     .home2 p {
         display: none;
     }
+
+    .silver {
+        grid-row: 3/11;
+        grid-column: 1;
+        background-color: silver;
+        width: 33vw;
+        height: 75vh;
+        text-align: center;
+        font-size: 2vh;
+    }
+
+    .silver h1 {
+        position: relative;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+    .silver h2 {
+        position: relative;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%)
+    }
     
+    .silver button {
+        position: relative;
+        top: 30%;
+        left: 15%;
+        transform: translate(-50%)
+    }
+    .gold {
+        grid-row: 3/11;
+        grid-column: 2;
+        background-color: rgb(192, 166, 19);
+        width: 33vw;
+        height: 75vh;
+        text-align: center;
+        font-size: 2vh;
+    }
+
+    .gold h1 {
+        position: relative;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%)
+    }
+    
+    .gold h2 {
+        position: relative;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+    .gold button {
+        position: relative;
+        top: 30%;
+        left: 15%;
+        transform: translate(-50%)
+    }
+
+    .diamond {
+        grid-row: 3/11;
+        background-color: rgb(97, 142, 194);
+        width: 33vw;
+        height: 75vh;
+        text-align: center;
+        font-size: 2vh;
+    }
+
+    .diamond h1 {
+        position: relative;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%)
+    }
+    
+    .diamond h2 {
+        position: relative;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+    .diamond button {
+        position: relative;
+        top: 30%;
+        left: 15%;
+        transform: translate(-50%)
+    }
+    button {
+        cursor: pointer;
+        border-radius: 20px;
+        background-color: black;
+        border: 0.2vw solid;
+        border-color: rgb(119, 101, 1);
+        height: 7vh;
+        width: 10vw;
+        font-size: 2vw;
+        color: rgb(119, 101, 1);
+    }
+    
+    .book_mobile {
+        display: none;
+    }
+
+    .book_desk {
+        display: block;
+        display: grid;
+        grid-template-columns: repeat(1fr, 2);
+        height: 75vh;
+        width: 100vw;
+    }
+    
+    .personal {
+        grid-column: 1;
+        width: 49vw;
+        height: 74vh;
+        font-size: 3vh;
+        display: grid;
+        grid-template-columns: repeat(1fr, 2);
+        grid-template-rows: repeat(1fr, 2);
+    }
+    
+    .personal h1 {
+        grid-row: 1;
+        grid-column: span 2;
+    }
+    .group {
+        grid-column: 2;
+        grid-row: none;
+        width: 49vw;
+        height: 74vh;
+        font-size: 3vh;
+    }
+
+    .group h1 {
+        grid-row: 1;
+        grid-column: span 3;
+    }
+
+    .account {
+        grid-template-rows: repeat(1fr, 6);
+        grid-template-columns: repeat(1fr, 2);
+        height: 75vh;
+        width: 98vw;
+    }
+    
+    .login {
+        grid-column: 1;
+        grid-row: span 6;
+        width: 49vw;
+        display: grid;
+        grid-template-rows: inherit;
+        /* grid-template-columns: repeat(1fr, 4); */
+    }
+
+    .login h1 {
+        grid-row: 2;
+        grid-column: 3 / 5;
+    }
+    
+    .login input {
+        grid-row: 3;
+        grid-column: span all;
+        height: 2vh;
+        width: 12vw;
+        align-content: center;
+    }
+    .login button {
+        grid-row: 4;
+        grid-column: 2 / 3;
+        font-size: 2.5vh;
+        align-content: center;
+    }
+    
+    .register {
+        grid-column: 2;
+        grid-row: span 6;
+        width: 49vw;
+        
+    }
+    
+    .register button {
+        font-size: 2.5vh;
+        grid-row: 6;
+        align-content: center;
+    }
+
     footer {
         width: 100vw;
         height: 10vh;
