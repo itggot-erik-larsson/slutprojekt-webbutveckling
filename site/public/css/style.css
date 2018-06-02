@@ -254,7 +254,7 @@ button {
 .book_desk {
     display: none;
 }
-.account {
+.account_mobile {
     text-align: center;
     display: grid;
     grid-template-rows: repeat(1fr, 6);
@@ -265,29 +265,33 @@ button {
     color: rgb(119, 101, 1);
 }
 
-.login {
+.account_mobile .login {
     grid-row: span 2;
     border: solid;
     border-color: rgb(119, 101, 1);
 }
 
-.login button {
+.account_mobile .login button {
     grid-row: 3;
     grid-column: 2 / 3;
     font-size: 2.5vh;
     align-content: center;
 }
 
-.register {
+.account_mobile .register {
     grid-row: 4;
     border: solid;
     border-color: rgb(119, 101, 1);
 }
 
-.register button {
+.account_mobile .register button {
     font-size: 2.5vh;
     grid-row: 6;
     align-content: center;
+}
+
+.account_desk {
+    display: none;
 }
 
 .desk_menu {
@@ -576,52 +580,104 @@ button {
         grid-column: span 3;
     }
 
-    .account {
-        grid-template-rows: repeat(1fr, 6);
-        grid-template-columns: repeat(1fr, 2);
-        height: 75vh;
-        width: 98vw;
+    .account_mobile {
+        display: none;
     }
     
-    .login {
-        grid-column: 1;
-        grid-row: span 6;
-        width: 49vw;
+    .account_desk {
+        grid-template-columns: repeat(1fr, 2);
+        width: 100vw;
+        height: 75vh;
+        background-color: rgb(119, 101, 1);
+        display: block;
         display: grid;
-        grid-template-rows: inherit;
-        /* grid-template-columns: repeat(1fr, 4); */
+        margin-bottom: 1vh;
     }
 
-    .login h1 {
+    .account_desk .login {
+        grid-column: 1;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1fr, 3);
+        grid-template-rows: repeat(1fr, 5);
+        height: 75vh;
+        width: 50vw;
+        background-color: black;
+        color: rgb(119, 101, 1);
+        border: solid;
+        border-color: rgb(119, 101, 1);
+    }
+
+    .account_desk h1 {
         grid-row: 2;
-        grid-column: 3 / 5;
+        grid-column: span 3;
+        margin-top: 7vh;
     }
-    
-    .login input {
+
+    .account_desk .input1 {
+        grid-column: span 3;
         grid-row: 3;
-        grid-column: span all;
-        height: 2vh;
-        width: 12vw;
-        align-content: center;
+        width: 10vw;
+        height: 5vh;
+        margin-left: 19.5vw;
+
     }
-    .login button {
+
+    .account_desk .input2 {
+        grid-column: span 3;
         grid-row: 4;
-        grid-column: 2 / 3;
-        font-size: 2.5vh;
-        align-content: center;
+        width: 10vw;
+        height: 5vh;
+        margin-left: 19.5vw;
     }
-    
-    .register {
+    .account_desk button {
+        grid-row: 5;
+        grid-column: span 3;
+        font-size: 2.5vh;
+        margin-left: 19.5vw;
+    }
+
+    .account_desk .register {
         grid-column: 2;
-        grid-row: span 6;
-        width: 49vw;
-        
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1fr, 3);
+        grid-template-rows: repeat(1fr, 5);
+        height: 75vh;
+        width: 50vw;
+        background-color: black;
+        color: rgb(119, 101, 1);
+        border: solid;
+        border-color: rgb(119, 101, 1);
     }
-    
-    .register button {
+
+    .account_desk h1 {
+        grid-row: 2;
+        grid-column: span 3;
+        margin-top: 7vh;
+    }
+
+    .account_desk .input3 {
+        grid-column: span 3;
+        grid-row: 3;
+        width: 10vw;
+        height: 5vh;
+        margin-left: 19.5vw;
+
+    }
+
+    .account_desk .input4 {
+        grid-column: span 3;
+        grid-row: 4;
+        width: 10vw;
+        height: 5vh;
+        margin-left: 19.5vw;
+    }
+    .account_desk button {
+        grid-row: 5;
+        grid-column: span 3;
         font-size: 2.5vh;
-        grid-row: 6;
-        align-content: center;
+        margin-left: 19.5vw;
     }
 
     footer {
