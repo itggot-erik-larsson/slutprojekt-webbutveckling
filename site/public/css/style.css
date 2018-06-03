@@ -11,7 +11,7 @@ body {
     grid-template-columns: repeat(1fr, 3);
     width: 100vw;
     height: 100vh;
-    background-color: grey;
+    background-color: rgb(119, 101, 1);
 }
 header {
     grid-row: 1;
@@ -297,7 +297,19 @@ button {
 .desk_menu {
     display: none;
 }
-@media (min-width: 750px) {
+
+.image {
+    width: 100vw;
+    height: 75vh;
+    background-image: url("../img/map.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid;
+    border-color: black;
+}
+
+@media (min-width: 1000px) {
     body {
         background-color: black;
         margin: 0;
@@ -710,5 +722,17 @@ button {
     .column3 {
         grid-column: 3;
         grid-row: span 3;
+    }
+
+    .image {
+        width: 50vw;
+        height: 75vh;
+        margin-left: 25vw;
+        background-image: url("../img/map.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: solid;
+        border-color: black;
     }
 }
